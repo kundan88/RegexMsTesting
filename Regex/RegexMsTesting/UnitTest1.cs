@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using RegexPattern;
 
 namespace UnitTest1
@@ -24,6 +23,20 @@ namespace UnitTest1
             //Act
             string expected = "Kundan";
             string actual = person.ValidateFirstName(firstname);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Validating_Lastname()
+        {
+            //Arrange
+            string lastname = "Kamble";
+            person = new Validation();
+
+            //Act
+            string expected = "Kamble";
+            string actual = person.ValidateLastName(lastname);
 
             //Assert
             Assert.AreEqual(expected, actual);
