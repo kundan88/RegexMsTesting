@@ -16,6 +16,12 @@
             string lastname = Console.ReadLine();
             person.ValidateLastName(lastname);
 
+            //UC3
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Enter The Email_ID: ");
+            string EmailID = Console.ReadLine();
+            person.EmailID(EmailID);
+
         }
     }
 }
