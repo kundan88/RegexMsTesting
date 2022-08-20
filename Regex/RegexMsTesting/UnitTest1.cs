@@ -73,11 +73,25 @@ namespace UnitTest1
         public void Validating_Password()
         {
             //Arrange
-            string password = "kundank@#$1234";
+            string password = "Kundan@#$1234";
             person = new Validation();
 
             //Act
-            string expected = "Kundank@#$1234";
+            string expected = "Kundan@#$1234";
+            string actual = person.Password(password);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Validating_PasswordRule2()
+        {
+            //Arrange
+            string password = "Kundan@#$1234";
+            person = new Validation();
+
+            //Act
+            string expected = "Kundan@#$1234";
             string actual = person.Password(password);
 
             //Assert
@@ -85,3 +99,4 @@ namespace UnitTest1
         }
     }
 }
+

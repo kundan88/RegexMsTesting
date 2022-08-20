@@ -34,6 +34,12 @@
             string Password = Console.ReadLine();
             person.Password(Password);
 
+            //UC6
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Enter The Password: ");
+            string PasswordRule2 = Console.ReadLine();
+            person.Password(PasswordRule2);
+
         }
     }
 }
