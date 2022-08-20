@@ -21,7 +21,7 @@ namespace UnitTest1
             person = new Validation();
 
             //Act
-            string expected = "Kamble";
+            string expected = "Kundan";
             string actual = person.ValidateFirstName(firstname);
 
             //Assert
@@ -49,7 +49,7 @@ namespace UnitTest1
             person = new Validation();
 
             //Act
-            string expected = "kamble@gmail.com";
+            string expected = "kundan@gmail.com";
             string actual = person.EmailID(Email_ID);
 
             //Assert
@@ -65,6 +65,20 @@ namespace UnitTest1
             //Act
             string expected = "91 1234567890";
             string actual = person.Phonenumber(phonenumber);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Validating_Password()
+        {
+            //Arrange
+            string password = "kundank@#$1234";
+            person = new Validation();
+
+            //Act
+            string expected = "Kundank@#$1234";
+            string actual = person.Password(password);
 
             //Assert
             Assert.AreEqual(expected, actual);
