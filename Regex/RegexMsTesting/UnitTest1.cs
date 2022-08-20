@@ -97,6 +97,21 @@ namespace UnitTest1
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Validating_PasswordRule3()
+        {
+            //Arrange
+            string password = "Kundan@#$1234";
+            person = new Validation();
+
+            //Act
+            string expected = "Kundan@#$1234";
+            string actual = person.Password(password);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
+
 
