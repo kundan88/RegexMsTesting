@@ -99,5 +99,17 @@ namespace RegexPattern
             }
             return Password;
         }
+        public string PasswordRule4(string Password)
+        {
+            if (Regex.IsMatch(Password, PassWord))
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
+            }
+            return Password;
+        }
     }
 }
